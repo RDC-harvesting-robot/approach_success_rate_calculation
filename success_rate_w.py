@@ -9,8 +9,8 @@ plt.rcParams['font.family'] = 'Times New Roman' # Fonts
 
 ### 障害物距離読み込み ###
 # csvファイル読み込み　(左右障害物と前後障害物はコメントアウトで切り替え)
-# df = pd.read_csv("/home/koki/ROBOMECH2026/data/obst_dist_left_and_right.csv", header=None) #左右方向の障害物
-df = pd.read_csv("/home/koki/ROBOMECH2026/data/obst_dist_back_and_top.csv", header=None) # 前後方向の障害物
+# df = pd.read_csv("/home/koki/ROBOMECH2026/data/260910_obst_dist_left_and_right.csv", header=None) #左右方向の障害物
+df = pd.read_csv("/home/koki/ROBOMECH2026/data/260910_obst_dist_back_and_top.csv", header=None) # 前後方向の障害物
 
 # 1,2列目のデータを取得して数値に変換
 data_left = df[0].astype(float)
@@ -18,7 +18,7 @@ data_right = df[1].astype(float)
 
 ### 認識誤差 ###
 mu=0
-sigma=5 #誤差 ±xmm
+sigma=2 #誤差 ±xmm
 
 # plt.title(f"誤差±{sigma}[mm]のときの最適な開口部のサイズ")
 
